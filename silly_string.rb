@@ -7,7 +7,7 @@
 
 
 #3: Now let's make all the characters lowercase in the string below:
-puts "IM NOT SHOUTING".downcase
+puts "IM NOT SHOUTING"
 
 #4: Using a method built into ruby, count how many letters are in the string below:
 puts "supercalifragilisticexpialidocious"
