@@ -4,10 +4,11 @@ A string in Ruby is an data type that holds words, numbers, and other characters
 
 You can read about strings and all the methods available [here](http://www.ruby-doc.org/core-2.1.1/String.html).
 
-NOTE: This lab does not have tests, so the `learn` command wont work. Instead, just write your code and test it out manually by running `ruby silly_string.rb` in the command line. If the output looks like it's intended to, you're good to go and can use `learn submit` to submit your work!
+Write your code and test it out manually by running `ruby silly_string.rb` in the command line. If the output looks like it's intended to, you're good to go!
 
 
-##Challenge:
+## Challenge:
+
 1. Create a string that contains your favorite word. It can be in any language!
 
 2. Using a method built into ruby, capitalize every letter in the string you just created
@@ -21,8 +22,3 @@ NOTE: This lab does not have tests, so the `learn` command wont work. Instead, j
 6. Now let's capitalize just the first letter of the sentence `"i really like programming"`
 
 7. Let's take the string `"Astounding aardvarks, arguably an ancient animal, always ate apples and acorns and artichokes all around Athens, amazing!"`. We want to use the `gsub` method to switch all `A` for `O`, as well as all `a` for `o`. We'll need to chain `gsub`s.
-
-
-
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/silly_string' title='Silly String'>Silly String</a> on Learn.co and start learning to code for free.</p>
