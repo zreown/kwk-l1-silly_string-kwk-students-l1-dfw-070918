@@ -6,6 +6,7 @@ You can read about strings and all the methods available [here](http://www.ruby-
 
 Write your code and test it out manually by running `ruby silly_string.rb` in the command line. If the output looks like it's intended to, you're good to go!
 
+You can run `learn` to see if the tests are passing.
 
 ## Challenge:
 
@@ -23,3 +24,7 @@ Write your code and test it out manually by running `ruby silly_string.rb` in th
 
 7. Let's take the string `"Astounding aardvarks, arguably an ancient animal, always ate apples and acorns and artichokes all around Athens, amazing!"`. We want to use the `gsub` method to switch all `A` for `O`, as well as all `a` for `o`. We'll need to chain `gsub`s.
 <p data-visibility='hidden'>KWK-L1 Silly String</p>
+
+## Hints
+
+Don't edit the variable names in the file. Try running `ruby silly_string.rb` to see what is being printed.

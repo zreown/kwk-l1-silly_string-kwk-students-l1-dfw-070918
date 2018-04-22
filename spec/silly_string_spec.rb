@@ -1,55 +1,53 @@
-
 require 'spec_helper'
 
-describe "silly_string" do
+describe "Silly Strings" do
 
-  describe "#my_string" do
-    it "should print out a string with the world placate" do
-      expect($stdout).to receive(:puts).with("placate")
-      my_string
-    end
+  it "contains your favorite word" do
+    your_favorite_word = get_variable_from_file('./silly_string.rb', 'your_favorite_word')
+    
+    expect(your_favorite_word).to be_a(String)
+    expect(your_favorite_word).to_not be_empty, "Did you put a String inside your_favorite_word?"
+  end
+  
+
+  
+  it 'capitalizes your_favorite_word' do
+    your_favorite_word = get_variable_from_file('./silly_string.rb', 'your_favorite_word')
+    favorite_word_in_all_caps = get_variable_from_file('./silly_string.rb', 'favorite_word_in_all_caps')
+
+    expect(favorite_word_in_all_caps).to eq(your_favorite_word.upcase), "Did you upcase your_favorite_word?"
   end
 
-  describe "#capitalize_my_string" do
-    it "should print out PLACATE" do
-      expect($stdout).to receive(:puts).with("PLACATE")
-      capitalize_my_string
-    end
+
+  it 'lowercases all the letters in phrase' do
+    lowercased_phrase = get_variable_from_file('./silly_string.rb', 'lowercased_phrase')
+
+    expect(lowercased_phrase).to eq("IM NOT SHOUTING".downcase), "Did you downcase phrase?"
   end
 
-  describe "#downcase_my_string" do
-    it "should print out placate in lowercase letters" do
-      expect($stdout).to receive(:puts).with("placate")
-      downcase_my_string
-    end
+  it 'counts how many letters are in big_word' do
+    letter_count = get_variable_from_file('./silly_string.rb', 'letter_count')
+
+    expect(letter_count).to eq("supercalifragilisticexpialidocious".length), "Did you size big_word?"
   end
 
-  describe "#count_letters" do
-    it "should print out 7" do
-      expect($stdout).to receive(:puts).with(7)
-      count_letters
-    end
+  it 'counts how many letters are in big_word' do
+    bigger_word = get_variable_from_file('./silly_string.rb', 'bigger_word')
+    new_letter_count = get_variable_from_file('./silly_string.rb', 'new_letter_count')
+
+    expect(bigger_word).to eq("supercalifragilisticexpialidociouswowmom"), "Did you add wow and mom to big_word?"
+    expect(new_letter_count).to eq("supercalifragilisticexpialidociouswowmom".length), "Did you size bigger_word?"
   end
 
-  describe "#concatonate_strings" do
-    it "should print out 'to placate means to make someone less angry.'" do
-      expect($stdout).to receive(:puts).with("to placate means to make someone less angry.")
-      concatonate_strings
-    end
+  it 'Properly capitalizes the first letter in proper_sentence' do
+    proper_sentence = get_variable_from_file('./silly_string.rb', 'proper_sentence')
+
+    expect(proper_sentence).to eq("i really like programming.".capitalize), "Did you capitalize proper_sentence?"
   end
 
-  describe "#capitalize_first_letter" do
-    it "should print out 'To placate means to make someone less angry.'" do
-      expect($stdout).to receive(:puts).with("To placate means to make someone less angry.")
-      capitalize_first_letter
-    end
-  end
+  it 'substitutes all "A" for "O" and "a" for "o" in sentence' do
+    sentence = get_variable_from_file('./silly_string.rb', 'sentence')
 
-  describe "#split_my_string" do
-    it "should print out every word as an individual string" do
-      expect($stdout).to receive(:puts).with(["to", "placate", "means", "to", "make", "someone", "less", "angry."])
-      split_my_string
-    end
+    expect(sentence).to eq(sentence.gsub("A", "O").gsub("a", "o")), "Did you gsub 'A' for 'O' and 'a' for 'o'?"
   end
-
 end
